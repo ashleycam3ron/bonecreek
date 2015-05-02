@@ -36,7 +36,7 @@
 						while (have_posts()) : the_post();
 							echo "<h2>News</h2>"; ?>
 						<?php the_content('[...]'); ?>
-                        <p><a class="btn-default" href="/news/news-archive/" class="more">Read More</a></p>
+                        <p><a class="btn-default" href="<?php echo get_home_url();?>/news/news-archive/" class="more">Read More</a></p>
 						 <?php endwhile;
 						wp_reset_query(); ?>
                     </div>
@@ -47,7 +47,7 @@
                             while (have_posts()) : the_post();
                                 echo "<h2>Events</h2>"; ?>
                             <?php the_content('[...]'); ?>
-                             <p><a class="btn-default" href="/news/events/" class="more">Read More</a></p>
+                             <p><a class="btn-default" href="<?php echo get_home_url();?>/news/events/" class="more">Read More</a></p>
                              <?php endwhile;
                             wp_reset_query(); ?>
                     </div>
@@ -58,7 +58,7 @@
                             while (have_posts()) : the_post();
                                 echo "<h2>Upcoming</h2>"; ?>
                             <?php the_content('[...]'); ?>
-                             <p><a class="btn-default" href="/news/events/" class="more">Read More</a></p>
+                             <p><a class="btn-default" href="<?php echo get_home_url();?>/news/events/" class="more">Read More</a></p>
                             <?php endwhile;
                             wp_reset_query(); ?>
                     </div>

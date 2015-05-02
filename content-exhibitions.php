@@ -22,14 +22,15 @@
         <div class="col-md-9">
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
+            <?php edit_post_link( __( 'Edit', 'bonecreek' ), '<p class="edit-link"><span class="glyphicon glyphicon-pencil"></span>', '</p>' ); ?>
 		</div>
 		<?php } else { ?>
 		<div class="col-md-12">
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
+            <?php edit_post_link( __( 'Edit', 'bonecreek' ), '<p class="edit-link"><span class="glyphicon glyphicon-pencil"></span>', '</p>' ); ?>
 		</div>
 		<?php } ?>
-		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
     </article>
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>

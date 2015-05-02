@@ -9,6 +9,7 @@ remove_action('wp_print_styles', 'print_emoji_styles' );
 
 if(!function_exists('initialize')){
 	function initialize() {
+		add_theme_support( 'automatic-feed-links' );
 		add_theme_support('post-thumbnails');
 		//add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 	}

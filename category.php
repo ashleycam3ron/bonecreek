@@ -11,20 +11,20 @@
 
 <?php get_header(); ?>
 	<div id="primary">
-    <h1 class="page-title"><?php printf( __( '%s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+    <h1 class="page-title"><?php printf( __( '%s', 'bonecreek' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="entry">
             	<aside class="featured">
 					<?php if ( has_post_thumbnail()) {
                        $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
                        echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
-                       echo get_the_post_thumbnail($post->ID, 'medium'); 
+                       echo get_the_post_thumbnail($post->ID, 'medium');
                        echo '</a>';
                        echo '<span>' . get_post( get_post_thumbnail_id() )->post_excerpt . '</span>';
                         } ?>
                 </aside>
             	<article class="post" id="post-<?php the_ID(); ?>">
-					
+
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php if(get_field('sku')){ ?>
                             <p>SKU: <?php the_field('sku'); ?></p>

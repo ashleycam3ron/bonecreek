@@ -15,7 +15,7 @@ function enqueue(){
 	wp_register_script('sticky', get_stylesheet_directory_uri().'/js/jquery.sticky.js');
 
 	//Theme Functions
-	wp_register_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', array('jquery'),'1.0' );
+	wp_register_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', NULL, NULL);
 
 //enqueue scripts
 	wp_enqueue_script(array('jquery','bootstrap','fancybox2','sticky','functions'));
@@ -29,12 +29,13 @@ function enqueue(){
 
 	wp_register_style('fancybox2', get_stylesheet_directory_uri().'/js/source/jquery.fancybox.css', NULL, '2.1.4');
 
+	//Theme stylesheet
+	wp_register_style('styles', get_stylesheet_directory_uri().'/style.css', NULL, NULL);
+
 
 //enqueue styles
-	wp_enqueue_style(array('bootstrap','fancybox2'));
+	wp_enqueue_style(array('bootstrap','fancybox2','styles'));
 
-	//Theme stylesheet
-	wp_enqueue_style('styles', get_stylesheet_uri());
 
 }
 

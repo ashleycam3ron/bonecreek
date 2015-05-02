@@ -65,7 +65,7 @@
           	<div class="fb-like" data-href="https://www.facebook.com/bonecreekmuseum" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="lucida grande"></div>
           	<p>Show your support on Facebook. Recommend us to friends &amp; family.</p>
           </div>
-		  <a class="navbar-brand" href="<?php bloginfo('url')?>"><h1><?php bloginfo('name')?></h1></a>
+		  <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>"><h1><?php bloginfo('name')?></h1></a>
 </div>
 		<nav class="navbar navbar-default row" role="navigation">
 			<h2>Primary Navigation</h2>
